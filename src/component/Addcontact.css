@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+.contact_container {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.contact_container::-webkit-scrollbar {
+  display: none;
+}
+
+.form_container {
+  width: 60%;
+  max-width: 980px;
+  min-height: 500px;
+  display: flex;
+  gap: 28px;
+  padding: 28px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+  margin: 20px 0;
+}
+
+.form_container form {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.form-cnt2 {
+  flex: 1;
+  margin-left: 40px;
+}
+
+/* ================= IMAGE ================= */
+
+.custom-file-upload {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: linear-gradient(145deg, #eef2ff, #ffffff);
+  border: 3px solid rgba(99, 102, 241, 0.16);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.12);
+}
+
+.upload-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.upload-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= FIELD ================= */
+
+.fiest_lable,
+.contact_notes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.fiest_lable i,
+.contact_notes i {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.fiest_lable input,
+.contact_notes textarea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  outline: none;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.fiest_lable input {
+  height: 46px;
+  border-radius: 14px;
+  padding: 0 14px;
+}
+
+.contact_notes textarea {
+  min-height: 120px;
+  border-radius: 14px;
+  padding: 14px;
+  resize: vertical;
+}
+
+.fiest_lable input:focus,
+.contact_notes textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* ================= BUTTON ================= */
+
+form > .form-cnt2 > button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  float: right;
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+/* ================= 1024 FIX ================= */
+
+@media (max-width: 1024px) {
+
+  .form_container {
+    width: 90%;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .form-cnt2 {
+    margin-left: 15px;
+  }
+
+  .fiest_lable,
+  .contact_notes {
+    gap: 10px;
+  }
+
+  .fiest_lable i,
+  .contact_notes i {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 16px;
+  }
+
+  .fiest_lable input {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .contact_notes textarea {
+    font-size: 14px;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 820px) {
+
+  .contact_container {
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  .form_container {
+    width: 100%;
+    flex-direction: column;
+    padding: 22px;
+    min-height: auto;
+  }
+
+  .form_container form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-cnt2 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .custom-file-upload {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 560px) {
+
+  .contact_container {
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .contact_container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .form_container {
+    width: 100%;
+    padding: 16px;
+    border-radius: 18px;
+    gap: 10px;
+  }
+
+  .form_container form {
+    gap: 8px;
+  }
+
+  .form-cnt2 {
+    margin-left: 0;
+  }
+
+  .fiest_lable,
+  .contact_notes {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px;
+  }
+
+  .fiest_lable i,
+  .contact_notes i {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .fiest_lable input,
+  .contact_notes textarea {
+    width: 100%;
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  .fiest_lable input {
+    height: 36px;
+    padding: 0 10px;
+  }
+
+  .contact_notes textarea {
+    min-height: 90px;
+    padding: 10px;
+  }
+
+  .custom-file-upload {
+    width: 85px;
+    height: 85px;
+  }
+
+  form > .form-cnt2 > button {
+    width: 100%;
+    float: none;
+    padding: 11px;
+    font-size: 14px;
+  }
+}
+
+#file-upload {
+  display: none;
+}
